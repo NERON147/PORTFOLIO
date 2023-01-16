@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutMe from '../views/AboutMe.vue'
 import Portfolio from '../views/Portfolio.vue'
 import Links from '../views/Links.vue'
+import Work from '../views/Work.vue'
 
 
 Vue.use(VueRouter)
@@ -29,7 +30,11 @@ const routes = [
     name: 'links',
     component: Links
   },
-  
+  {
+    path: '/work/:id',
+    name: 'work',
+    component: Work
+  },
 ]
 
 const router = new VueRouter({

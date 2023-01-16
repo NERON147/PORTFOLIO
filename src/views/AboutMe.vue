@@ -196,19 +196,20 @@ window.onscroll = function() {
 		frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`)
 	})
 }
-window.addEventListener("scroll", (e) => {
-if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 50 )) {
+window.addEventListener('scroll', this.handleScroll)
+
+    },
+    methods: {
+      handleScroll() {
+        if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 50 )) {
     this.$router.push('/portfolio')
   }
-})
-
+  }
     },
 
     destroyed() {
       document.body.style.cssText = `height: auto`;
-      window.removeEventListener("scroll", (e) => {
-
-})
+      window.removeEventListener('scroll', this.handleScroll)
     },
     created() {
         window.scrollTo(0, 1)

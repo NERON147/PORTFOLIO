@@ -4,28 +4,36 @@
     <div class="swiper slider slider1" >
         <div class="swiper-wrapper slider-wrapper">
             <div class="swiper-slide slider-item" v-for="slide in slide1" :key="slide.id">
+                <router-link :to="/work/ + slide.id">
                 <div class="slider-img" :style="{ 'background-image': 'url(' + require('../assets/img/imgSlides/' + slide.img) + ')' } "></div>
+            </router-link>
                 </div>
             </div>
         </div>
         <div class="swiper slider slider2">
         <div class="swiper-wrapper slider-wrapper">
             <div class="swiper-slide slider-item" v-for="slide2 in slide2" :key="slide2.id">
+                <router-link :to="/work/ + slide2.id">
                 <div class="slider-img" :style="{ 'background-image': 'url(' + require('../assets/img/imgSlides/' + slide2.img) + ')' } "></div>
+            </router-link>
                 </div>
             </div>
         </div>
         <div class="swiper slider slider3">
         <div class="swiper-wrapper slider-wrapper">
             <div class="swiper-slide slider-item" v-for="slide3 in slide3" :key="slide3.id">
+                <router-link :to="/work/ + slide3.id">
                 <div class="slider-img" :style="{ 'background-image': 'url(' + require('../assets/img/imgSlides/' + slide3.img) + ')' } "></div>
+            </router-link>
                 </div>
             </div>
         </div>
         <div class="swiper slider slider4">
         <div class="swiper-wrapper slider-wrapper">
             <div class="swiper-slide slider-item" v-for="slide4 in slide4" :key="slide4.id">
+                <router-link :to="/work/ + slide4.id">
                 <div class="slider-img" :style="{ 'background-image': 'url(' + require('../assets/img/imgSlides/' + slide4.img) + ')' } "></div>
+            </router-link>
                 </div>
             </div>
         </div>
@@ -51,9 +59,6 @@
 // import bindSwipers from '@/libs/swiper/bindSwipers.js'
 import Swiper from '@/libs/swiper/swiper-bundle.min.js'
 export default {
-    beforeCreate() {
-         
-    },
     mounted() {
         document.body.style.cssText += `overflow: hidden;`;
 
