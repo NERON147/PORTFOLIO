@@ -1,5 +1,6 @@
 <template>
 <div class="work-wrapper">
+    <router-link to="/portfolio" class="back"> ᐊ Back?</router-link>
     <div class="slider-item">
         <a :href="work.page" target="_blank"> <div class="slider-img" :style="{ 'background-image': 'url(' + require('../assets/img/imgSlides/' + work.img) + ')' } "></div></a>
     </div>
@@ -56,5 +57,15 @@ export default {
 }
 .big{
     font-size: 20px;
+}
+
+.back {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 12vh 10vw 0 0;
+    font-size: 20px;
+    color: aliceblue;
 }
 </style>

@@ -78,9 +78,10 @@
               • CSS3 <br>
               • BEM <br>
               • Bootstrap 5 <br>
-              • Vue JS <br>
+              • Vue 2,3 JS <br>
               • Vue Router <br>
               • Vuex <br>
+              • Pinia <br>
               • Vuetify <br>
               • Vuelidate <br>
               • Axios <br>
