@@ -39,12 +39,12 @@
         </div>
         <div class="icons">
     <router-link to="/links">
-      <div class="layer-l">
+      <div class="layer-l wave-glow">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        <span class="fab fa-instagram">Next?</span>
+        <span class="fab wave-glow">Next?</span>
       </div>
     </router-link>
   </div>

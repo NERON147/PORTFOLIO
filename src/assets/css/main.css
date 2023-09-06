@@ -486,6 +486,32 @@ body {
   .icons:hover{
     opacity: 1;
   }
+
+  @keyframes wave-glow {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.7),
+                  0 0 20px rgba(0, 0, 255, 0.5),
+                  0 0 30px rgba(0, 0, 255, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(0, 0, 255, 0.7),
+                  0 0 50px rgba(0, 0, 255, 0.5),
+                  0 0 60px rgba(0, 0, 255, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.7),
+                  0 0 20px rgba(0, 0, 255, 0.5),
+                  0 0 30px rgba(0, 0, 255, 0.3);
+    }
+  }
+  
+  .wave-glow {
+    width: 100px; /* Замените эту ширину и высоту на свои нужды */
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: wave-glow 2s linear infinite; /* Здесь можно настроить длительность и тип анимации */
+  }
   
   .icons a{
     margin: 0 14px;

@@ -101,20 +101,20 @@ export default new Vuex.Store({
       {
         id: 5,
         img: '5.png',
-        title: 'Svg Animation',
-        tec: 'Vue JS, Svg',
-        descr: 'Демонстрация работы с SVG анимацией',
-        git: 'https://github.com/NERON147/happy',
-        page: 'https://neron147.github.io/happyDemonstration/'
+        title: 'Weather',
+        tec: 'Vue JS 3, Axios, Pinia, Swiper JS',
+        descr: 'Учебный проект приложение погоды',
+        git: 'https://github.com/NERON147/weather',
+        page: 'https://neron147.github.io/weather/'
       },
       {
         id: 6,
         img: '6.png',
-        title: 'Git Finder',
-        tec: 'Vue JS, Axios',
-        descr: 'Приложение поиска GitHub репозитория основанное на их апи',
-        git: '???',
-        page: 'https://neron147.github.io/gitfinder/'
+        title: 'Zabotay',
+        tec: 'Vue 3 JS, bulma, gitart-vue-dialog, swiper',
+        descr: 'Учебный проект для компании Zabotay',
+        git: 'https://github.com/NERON147/zabotay',
+        page: 'https://neron147.github.io/zabotay/'
       },
       {
         id: 7,
