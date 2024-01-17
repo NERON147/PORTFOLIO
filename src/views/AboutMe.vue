@@ -2,7 +2,10 @@
   <div class="container">
     <section class="gallery">
       <div class="frame frame-bg">
-        <div id="element" class="about-text"></div>
+        <div
+          id="element"
+          class="about-text"
+        ></div>
       </div>
       <div class="frame">
 
@@ -38,7 +41,13 @@
 
       <div class="frame frame-bg-opas">
         <div class="frame-first-content">
-          <video class="frame-media2 frame-media1-right" src="../assets/img/About/prog2.mp4" autoplay loop muted></video>
+          <video
+            class="frame-media2 frame-media1-right"
+            src="../assets/img/About/prog2.mp4"
+            autoplay
+            loop
+            muted
+          ></video>
         </div>
       </div>
       <div class="frame frame-bg-opas">
@@ -75,7 +84,46 @@
       <div class="frame frame-bg-opas">
         <div class="frame-content frame-text-normal">
           <span style="font-weight: 600;">Frontend Developer</span> <br>
-          <span style="font-weight: 600;">Hubnero</span> (разработка ERP системы) | нояб. 2022 - наст. вр.<br>
+          <span style="font-weight: 600;">ESM Digital</span> дек. 2023 - наст. вр.<br>
+          <span style="font-weight: 600;">In progress....</span> <br>
+        </div>
+        <div class="frame ">
+          <div class="frame-content frame-text-normal">
+
+          </div>
+        </div>
+      </div>
+      <div class="frame ">
+        <div class="frame-content frame-text-normal">
+
+        </div>
+      </div>
+      <div class="frame frame-bg-opas">
+        <div class="frame-content frame-text-normal">
+          <span style="font-weight: 600;">Frontend Developer</span> <br>
+          <span style="font-weight: 600;">Ligth Digital</span> окт. 2023 - дек. 2023<br>
+          • Разработал несколько компонентов высоконагруженного<br>
+          интерфейса пользователя-продавца интернет-магазина<br>
+          • Разработал двухстраничный сайт-презентацию мобильного приложения<br>
+          • Разработал пользовательский интерфейс добавления формы мероприятия<br>
+          • Доработал / дополнил UX|UI библиотеку
+
+        </div>
+        <div class="frame ">
+          <div class="frame-content frame-text-normal">
+
+          </div>
+        </div>
+      </div>
+      <div class="frame ">
+        <div class="frame-content frame-text-normal">
+
+        </div>
+      </div>
+      <div class="frame frame-bg-opas">
+        <div class="frame-content frame-text-normal">
+          <span style="font-weight: 600;">Frontend Developer</span> <br>
+          <span style="font-weight: 600;">Hubnero</span> (разработка ERP системы) | нояб. 2022 - окт. 2023<br>
           • Разработал UX/UI библиотеку функциональных компонентов, внедрил в проект<br>
           • Разработал 8 функциональных вкладок<br>
           • Разработал модульную библиотеку запросов со стора (ранее все запросы были прямо в компонентах)<br>
@@ -100,7 +148,6 @@
           • Разработка лендидингов<br>
           • Поддержка и доработка уже готовых проектов<br>
           • Исправление багов<br>
-          • Взаимодействие с заказчиками для понимания их требований<br>
           • Интенсивное обучение<br>
         </div>
         <div class="frame ">
@@ -122,21 +169,21 @@
       <div class="frame frame-bg-opas">
         <div class="frame-content frame-text-normal">
           • JS => ES6+ <br>
+          • TS <br>
           • HTML5 <br>
           • CSS3 <br>
           • BEM <br>
-          • Bootstrap 5 <br>
           • Vue 2,3 JS <br>
+          • Nuxt 2,3 <br>
           • Vue Router <br>
           • Vuex <br>
           • Pinia <br>
           • Vuetify <br>
+          • Tailwind <br>
           • Axios <br>
           • Graph QL <br>
-          • HTTP <br>
+          • REST <br>
           • Git <br>
-          • GitHub <br>
-          • GitLab <br>
         </div>
       </div>
       <div class="frame frame-bg-opas">
@@ -221,7 +268,7 @@ export default {
       strings: "Hi my name is Maxim, if you want to continue ^^ scroll down %) My friend! 10010001100101110110011011001101111 🤖",
       waitUntilVisible: true
     }).go();
-    document.body.style.cssText += `height: 15500px`;
+    document.body.style.cssText += `height: 18500px`;
     let zSpacing = -1000,
       lastPos = zSpacing / 5,
       $frames = document.getElementsByClassName('frame'),

@@ -444,6 +444,17 @@ body {
   }
 
 @media (max-width:600px) {
+  .frame-text {
+    font-family: Pixon;
+    font-size: 30px;
+    margin-right: -300px;
+  }
+
+  .frame-text-normal {
+    font-family: Pixon;
+    font-size: 30px;
+  }
+
   .slide-mobile{
     display: flex;
     height: 100%;
