@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <div class="content">
-    <Hello/>
-    <Magic/>
+      <Hello />
+      <Magic />
     </div>
   </div>
 </template>
@@ -24,45 +24,67 @@ export default {
     Magic
   },
 
+  data() {
+    return {
+      images: [
+        { src: require('@/assets/img/1.png'), selector: '.layers-middle' },
+        { src: require('@/assets/img/2.png'), selector: '.layers-front' },
+        { src: require('@/assets/img/main.png'), selector: '.layer' }
+      ],
+      flag: false
+    }
+  },
+
   methods: {
     handleScroll() {
-    if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 2 )) {
-      document.body.style.cssText += `overflow: hidden;`;
-      let el = document.getElementsByClassName("main-header")[0];
-      setTimeout(() => (el.classList.remove("main-header"), document.getElementById('main').style.cssText += `transform: scale(2.4); transition: all ease 3s;`), 2000)
-    setTimeout(() => (this.$router.push('/about')), 3500)
-    }
+      if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 2)) {
+        document.body.style.cssText += `overflow: hidden;`;
+        let el = document.getElementsByClassName("main-header")[0];
+        setTimeout(() => (el.classList.remove("main-header"), document.getElementById('main').style.cssText += `transform: scale(2.4); transition: all ease 3s;`), 2000)
+        setTimeout(() => (this.$router.push('/about')), 3500)
+      }
 
       document.body.style.cssText += `--scrollTop: ${window.scrollY}px`;
 
-},
+    },
   },
-   mounted() {
-    if(isMobile) {
-      
-    }else{
-       gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-this.scrollSmoother = ScrollSmoother.create({
-	wrapper: '.wrapper',
-	content: '.content'
-})
+  mounted() {
+    let self = this;
+
+    this.images.forEach(function (image) {
+      const img = new Image();
+      img.src = image.src;
+      img.onload = function () {
+        console.log(document.querySelector(image.selector));
+        document.querySelector(image.selector).style.backgroundImage = 'url(' + img.src + ')';
+        setTimeout(() => {
+          self.$store.commit('changeLoader', false)
+        }, 2000);
+      };
+    });
+    if (isMobile) {
+
+    } else {
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+      this.scrollSmoother = ScrollSmoother.create({
+        wrapper: '.wrapper',
+        content: '.content'
+      })
     }
-   
-       window.addEventListener('scroll', this.handleScroll);
+
+    window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy() {
-    if(isMobile) {
+    if (isMobile) {
 
-    }else{
+    } else {
       this.scrollSmoother.kill()
     }
     window.removeEventListener('scroll', this.handleScroll);
 
-        document.body.removeAttribute('style')
+    document.body.removeAttribute('style')
   },
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

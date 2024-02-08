@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    loader: true,
     slide1: [
       {
         id: 1,
@@ -185,11 +186,17 @@ export default new Vuex.Store({
     SLIDE4(state) {
       return state.slide4
     },
+    LOADER(state) {
+      return state.loader
+    },
     SLIDE_WORK: (state) => (id) => {
       return state.slideWork.find(product => product.id == id)
     }
   },
   mutations: {
+    changeLoader(state, payload) {
+      state.loader = payload
+    }
   },
   actions: {
   }

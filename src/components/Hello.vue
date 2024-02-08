@@ -11,7 +11,11 @@
           <div class="layer layers-middle"></div>
           <div class="layer layers-front"></div>
           <div class="enjoy">Turn on the audio, scroll down and enjoy ;)</div>
-          <img class="arrow" src="../assets/img/arrow.svg" alt="">
+          <img
+            class="arrow"
+            src="../assets/img/arrow.svg"
+            alt=""
+          >
         </div>
       </div>
     </header>
@@ -20,9 +24,7 @@
 
 <script>
 export default {
-    
 };
 </script>
 
-<style>
-</style>
+<style></style>
