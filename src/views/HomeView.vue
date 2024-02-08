@@ -29,7 +29,8 @@ export default {
       images: [
         { src: require('@/assets/img/1.png'), selector: '.layers-middle' },
         { src: require('@/assets/img/2.png'), selector: '.layers-front' },
-        { src: require('@/assets/img/main.png'), selector: '.layer' }
+        { src: require('@/assets/img/main.png'), selector: '.layer' },
+        { src: require('@/assets/img/2fon.png'), selector: '.main-article' }
       ],
       flag: false
     }
@@ -55,7 +56,6 @@ export default {
       const img = new Image();
       img.src = image.src;
       img.onload = function () {
-        console.log(document.querySelector(image.selector));
         document.querySelector(image.selector).style.backgroundImage = 'url(' + img.src + ')';
         setTimeout(() => {
           self.$store.commit('changeLoader', false)

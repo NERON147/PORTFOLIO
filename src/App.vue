@@ -38,6 +38,28 @@
             browsing experience {{ ':)' }}
           </div>
         </transition>
+        <transition
+          name="fade"
+          mode="out-in"
+        >
+          <div
+            class="network-text2"
+            v-if="timer2"
+          >
+            A little more...
+          </div>
+        </transition>
+        <transition
+          name="fade"
+          mode="out-in"
+        >
+          <div
+            class="network-text3"
+            v-if="timer3"
+          >
+            A little little more...
+          </div>
+        </transition>
       </div>
     </transition>
     <transition
@@ -82,7 +104,9 @@ export default {
     return {
       preload: true,
       soundFalse: true,
-      timer: false
+      timer: false,
+      timer2: false,
+      timer3: false,
 
     }
   },
@@ -104,7 +128,9 @@ export default {
   },
 
   mounted() {
-    setTimeout(() => { this.timer = true }, 4000)
+    setTimeout(() => { this.timer = true }, 5000)
+    setTimeout(() => { this.timer2 = true }, 10000)
+    setTimeout(() => { this.timer3 = true }, 20000)
     let soundButton = document.querySelector('.soundbutton'),
       audio = document.querySelector('.audio')
     window.onfocus = function () {
