@@ -79,7 +79,7 @@ body {
 @media (max-width: 650px) { 
   .network-text {
   font-size: 18px;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
   }
 }
 .network-text2 {
@@ -96,7 +96,7 @@ body {
 @media (max-width: 650px) { 
   .network-text2 {
   font-size: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 80px;
   }
 }
 .network-text3 {
@@ -113,7 +113,7 @@ body {
 @media (max-width: 650px) { 
   .network-text3 {
   font-size: 18px;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   }
 }
 

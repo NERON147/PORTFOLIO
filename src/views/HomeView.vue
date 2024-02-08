@@ -51,12 +51,17 @@ export default {
   },
   mounted() {
     let self = this;
+    const body = document.querySelector('body')
 
     this.images.forEach(function (image) {
       const img = new Image();
       img.src = image.src;
+      document.addEventListener('DOMContentLoaded', function () {
+        body.style.overflow = 'hidden';
+      });
       img.onload = function () {
         document.querySelector(image.selector).style.backgroundImage = 'url(' + img.src + ')';
+        body.style.overflow = 'auto';
         setTimeout(() => {
           self.$store.commit('changeLoader', false)
         }, 2000);
